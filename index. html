@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maafin Aku Ya 😭💖</title>
+    <style>
+        body {
+            background-color: #fff0f6;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            padding-top: 40px;
+            color: #ff2e88;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 45px;
+            animation: fade 2s ease forwards;
+            opacity: 0;
+        }
+
+        p {
+            font-size: 20px;
+            width: 80%;
+            margin: 15px auto;
+            line-height: 1.5;
+            animation: fade 3s ease forwards;
+            opacity: 0;
+        }
+
+        #msg2 { animation-delay: 1s; }
+        #msg3 { animation-delay: 2s; }
+
+        button {
+            background-color: #ff5aa5;
+            border: none;
+            padding: 15px 35px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 15px;
+            color: white;
+            margin-top: 25px;
+            transition: 0.2s;
+            animation: fade 4s ease forwards;
+            opacity: 0;
+        }
+
+        button:hover { transform: scale(1.2); }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .foto-box {
+            animation: fade 2.2s ease forwards;
+            opacity: 0;
+        }
+
+        .foto {
+            width: 220px;
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 15px #ffbcd5;
+        }
+
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 25px;
+            animation: fall linear infinite;
+            color: #ff7eb8;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Maafin Aku Ya 😭💖</h1>
+
+    <div class="foto-box">
+        <img src="https://i.imgur.com/ed0Qf2e.jpeg" class="foto">
+        <img src="https://i.imgur.com/IMHJoPn.jpeg" class="foto">
+    </div>
+
+    <p id="msg1">Aku mau minta maaf… yang bener-bener tulus…</p>
+    <p id="msg2">Maaf karena udah bikin kamu sakit hati dan kecewa…</p>
+    <p id="msg3">Aku mau perbaiki semuanya… dan aku janji ga bakal ulangin kesalahan ini lagi…</p>
+
+    <button onclick="alert('Makasih ya udah maafin aku… aku sayang banget sama kamu 😭💖')">
+        Maafin Aku Ya 😔💕
+    </button>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "💗";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
